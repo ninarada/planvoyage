@@ -1,0 +1,140 @@
+/* .blog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+    padding: 30px;
+    column-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  } */
+  .blog{
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    padding: 150px; 
+    row-gap: 5vw;
+}
+
+.blog .titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}
+
+.blog .titleContainer .title{
+    font-size: 4vw;
+    font-weight: bolder;
+    color: var(--secondary-dark-color);
+    padding-bottom: 2%;
+}
+
+.blog .titleContainer .description{
+    font-size: 2vw;
+    font-weight: 600;
+    padding-bottom: 5%;
+}
+
+.blog .blogsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px; 
+}
+
+.btn {
+    background-color: var(--primary-dark-color);
+    color: var(--primary-light-color);
+    border-radius: 5vw;
+    padding: 10px 30px 10px 30px;
+    text-transform: uppercase;
+    font-size: 1.7vw;
+}
+
+.btn:hover {
+    background-color: var(--secondary-light-color);
+    color: var(--primary-dark-color);
+    cursor: pointer;
+}
+
+.blogCardItem {
+    position: relative;
+}
+
+.blogCardItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust the opacity as needed */
+    z-index: 1;
+}
+
+.cardText,
+.cardInfo {
+    position: relative;
+    z-index: 2;
+    color: white; 
+    
+}
+
+.cardInfo {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.avatar {
+    z-index: 2;
+    position: relative;
+}
+
+.blogCard {
+    margin-top: -15px;
+}
+
+@media (max-width: 768px) {
+    .blog {
+        grid-template-columns: 100%;
+        height: fit-content;
+        justify-items: center;
+        row-gap: 8vw;
+        padding: 10vw 10vw;
+    }
+
+    .blog .titleContainer {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .blog .titleContainer .title {
+        font-size: 7vw;
+    }
+
+    .blog .titleContainer .description {
+        text-align: center;
+        font-size: 4vw;
+    }
+
+    .blog .blogsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        font-size: 3vw;
+    }
+
+    .authorInfo {
+        font-size: 1.125rem;
+    }
+
+    .blog .cardInfo {
+        font-size: 1rem;
+    }
+
+}
